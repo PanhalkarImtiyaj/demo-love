@@ -1,0 +1,29 @@
+.marquee-wrap {
+  background: #c8f135;
+  overflow: hidden;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #b5e11e;
+  border-bottom: 2px solid #b5e11e;
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee-scroll 18s linear infinite;
+  width: max-content;
+}
+.marquee-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  padding: 0 24px;
+  text-transform: uppercase;
+}
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

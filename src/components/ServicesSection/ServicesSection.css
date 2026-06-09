@@ -1,0 +1,102 @@
+.services {
+  background: #fff;
+  padding: 90px 24px;
+  font-family: 'Inter', sans-serif;
+}
+.services__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.45fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+.services__label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7c3aed;
+  background: #ede9fe;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+.services__title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 40px;
+}
+.services__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.service-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.service-card:last-child { border-bottom: none; }
+.service-card__icon {
+  width: 52px; height: 52px;
+  min-width: 52px;
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.service-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 6px;
+}
+.service-card__desc {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+.service-card__link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7c3aed;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: gap 0.2s;
+}
+.service-card__link:hover { color: #6d28d9; }
+
+/* Right */
+.services__right {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+.services__right-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.7;
+  text-align: right;
+}
+.services__emoji {
+  font-size: 3rem;
+  transform: rotate(-20deg);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+}
+
+@media (max-width: 768px) {
+  .services__inner { grid-template-columns: 1fr; }
+  .services__right { align-items: flex-start; }
+  .services__right-text { text-align: left; }
+}

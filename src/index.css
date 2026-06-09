@@ -1,0 +1,113 @@
+/* ============================================
+   GLOBAL DESIGN TOKENS (CSS Variables)
+   Light & Dark mode supported
+   ============================================ */
+:root {
+  --color-primary:          #2563eb;
+  --color-primary-hover:    #1d4ed8;
+  --color-secondary:        #4b5563;
+  --color-secondary-hover:  #374151;
+  --color-danger:           #dc2626;
+  --color-danger-hover:     #b91c1c;
+
+  --color-bg:               #f9fafb;
+  --color-header-bg:        #ffffff;
+  --color-sidebar-bg:       #ffffff;
+  --color-bg-hover:         #f3f4f6;
+
+  --color-border:           #e5e7eb;
+  --color-border-hover:     #9ca3af;
+
+  --color-text-primary:     #111827;
+  --color-text-secondary:   #4b5563;
+  --color-text-tertiary:    #9ca3af;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+/* Dark Mode — toggled via ThemeContext adding class to <html> */
+html.dark {
+  --color-primary:          #3b82f6;
+  --color-primary-hover:    #60a5fa;
+  --color-secondary:        #9ca3af;
+  --color-secondary-hover:  #d1d5db;
+  --color-danger:           #f87171;
+  --color-danger-hover:     #fca5a5;
+
+  --color-bg:               #111827;
+  --color-header-bg:        #1f2937;
+  --color-sidebar-bg:       #1f2937;
+  --color-bg-hover:         #374151;
+
+  --color-border:           #374151;
+  --color-border-hover:     #4b5563;
+
+  --color-text-primary:     #f9fafb;
+  --color-text-secondary:   #d1d5db;
+  --color-text-tertiary:    #6b7280;
+}
+
+/* ============================================
+   CSS RESET
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+  margin-top: 0;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover { color: var(--color-primary-hover); }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background-color: var(--color-bg-hover);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 85%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-border-hover); }

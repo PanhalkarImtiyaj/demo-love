@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  font-family: 'Inter', sans-serif;
+}
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #1a1a2e;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.logo-icon { font-size: 1.4rem; color: #7c3aed; }
+.navbar__links {
+  display: flex;
+  list-style: none;
+  margin: 0; padding: 0;
+  gap: 28px;
+}
+.navbar__links li a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1a1a2e;
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.navbar__links li a:hover { color: #7c3aed; }
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.navbar__search {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1a1a2e;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+.navbar__cta {
+  background: #a3e635;
+  color: #1a1a2e;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.navbar__cta:hover { background: #84cc16; transform: scale(1.04); }
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.navbar__hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: #1a1a2e;
+  border-radius: 2px;
+}
+@media (max-width: 900px) {
+  .navbar__links {
+    display: none;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  .navbar__links.open { display: flex; }
+  .navbar__hamburger { display: flex; }
+}
