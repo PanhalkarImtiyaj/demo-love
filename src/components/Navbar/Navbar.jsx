@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logoImg from '../../assets/logo.png';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -9,8 +10,7 @@ export default function Navbar() {
       <div className="navbar__inner">
         {/* Logo */}
         <div className="navbar__logo">
-          <span className="logo-icon">⊞</span>
-          <span className="logo-text">Digtek</span>
+          <img src={logoImg} alt="Logo" className="navbar__logo-img" />
         </div>
 
         {/* Nav Links */}

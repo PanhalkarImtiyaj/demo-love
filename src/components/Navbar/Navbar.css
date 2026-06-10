@@ -28,7 +28,16 @@
   cursor: pointer;
   white-space: nowrap;
 }
-.logo-icon { font-size: 1.4rem; color: #7c3aed; }
+.navbar__logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  overflow: visible;
+}
+.logo-icon {
+  font-size: 1.4rem;
+  color: #7c3aed;
+}
 .navbar__links {
   display: flex;
   list-style: none;
