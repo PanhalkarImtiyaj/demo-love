@@ -235,17 +235,17 @@
 
 @media (max-width: 900px) {
   .hero {
-    min-height: calc(100dvh - 50px);
-    height: calc(100dvh - 50px);
+    min-height: 100vh;
+    height: auto;
     padding-top: 70px;
-    overflow: hidden;
-    justify-content: center;
+    overflow: visible;
+    justify-content: flex-start;
   }
   .hero__inner { 
     grid-template-columns: 1fr; 
     text-align: center; 
     padding: 20px 20px 0px; 
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -288,7 +288,7 @@
   .hero__boost {
     font-size: 38px;
     position: absolute;
-    top: 140px; /* sits right behind the tag, below navbar */
+    top: 140px;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
@@ -296,23 +296,28 @@
   }
 
   .hero__image-wrap {
-    margin-top: 0;
-    flex: 1;
-    min-height: 0;
+    margin-top: 20px;
+    flex-shrink: 0;
     width: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    overflow: visible;
+    position: relative;
   }
   .hero__img {
     transform: translateY(0);
     height: auto;
-    max-height: 58dvh;
-    min-height: 260px;
-    width: 90%;
-    max-width: 420px;
+    width: 85%;
+    max-width: 400px;
+    min-width: 280px;
     object-fit: contain;
     filter: drop-shadow(0 10px 40px rgba(0,0,0,0.25));
+  }
+  .hero__badge {
+    width: 70px;
+    height: 70px;
+    font-size: 0.6rem;
+    top: -10px;
+    right: 5%;
   }
 }
