@@ -2,6 +2,15 @@ import heroMan from '../../assets/hero-man.png';
 import './HeroSection.css';
 
 export default function HeroSection() {
+  const marqueeItems = [
+    '✦ THE BEST SOLUTION',
+    '✦ THE BEST SOLUTION',
+    '✦ THE BEST SOLUTION',
+    '✦ THE BEST SOLUTION',
+    '✦ THE BEST SOLUTION',
+    '✦ THE BEST SOLUTION',
+  ];
+
   return (
     <section className="hero" id="home">
       {/* Big BOOST NOW background heading */}
@@ -76,6 +85,15 @@ export default function HeroSection() {
       {/* Decorative blobs */}
       <div className="hero__blob hero__blob--1"/>
       <div className="hero__blob hero__blob--2"/>
+
+      {/* Mobile Marquee - only visible on mobile */}
+      <div className="hero__mobile-marquee">
+        <div className="hero__mobile-marquee-track">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span key={i} className="hero__mobile-marquee-item">{item}</span>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
