@@ -1,4 +1,5 @@
 import heroMan from '../../assets/hero-man.png';
+import 'boxicons/css/boxicons.min.css';
 import './HeroSection.css';
 
 export default function HeroSection() {
@@ -27,9 +28,14 @@ export default function HeroSection() {
             humour, or randomised.
           </p>
           <div className="hero__actions">
-            <a href="#services" className="hero__btn-primary">Get Started</a>
+            <a href="#services" className="hero__btn-primary">
+              <i className='bx bx-rocket'></i> Get Started
+            </a>
             <a href="#about" className="hero__btn-secondary">
-              <span className="play-icon">▶</span> Watch Video
+              <span className="play-icon">
+                <i className='bx bx-play'></i>
+              </span> 
+              Watch Video
             </a>
           </div>
           <div className="hero__trust">
@@ -39,7 +45,13 @@ export default function HeroSection() {
               <img src="https://i.pravatar.cc/100?img=3" alt="User 3" className="avatar" />
             </div>
             <div>
-              <div className="stars">★★★★★</div>
+              <div className="stars">
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+              </div>
               <div className="trust-text">Trustpilot <span>4.9 reviews</span></div>
             </div>
           </div>
@@ -65,7 +77,9 @@ export default function HeroSection() {
             Humour, or Randomised.
           </p>
           <div className="hero__play-badge">
-            <div className="play-circle">▶</div>
+            <div className="play-circle">
+              <i className='bx bx-play'></i>
+            </div>
             <span>Watch Demo</span>
           </div>
           <div className="hero__trust-right">
@@ -75,7 +89,13 @@ export default function HeroSection() {
               <img src="https://i.pravatar.cc/100?img=6" alt="User 6" className="avatar" />
             </div>
             <div>
-              <div className="stars">★★★★★</div>
+              <div className="stars">
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+              </div>
               <div className="trust-text">Trustpilot</div>
             </div>
           </div>
