@@ -1,61 +1,56 @@
+import rocketImg from '../../assets/rocket.png';
 import './StatsSection.css';
-
-const stats = [
-  { num: '500+', label: 'Total Project' },
-  { num: '300M+', label: 'Investment' },
-];
 
 export default function StatsSection() {
   return (
     <section className="stats" id="contact">
       <div className="stats__inner">
-        {/* Left */}
+        {/* Left Content */}
         <div className="stats__left">
-          <span className="stats__tag">SUCCESS STORY</span>
+          <span className="stats__tag">SUCCESS STORIES</span>
           <h2 className="stats__title">
             Organic Audience<br/>Driven On Your<br/>Websites
           </h2>
           <div className="stats__trust">
             <div className="trust-avatars">
-              <div className="avatar av1"/>
-              <div className="avatar av2"/>
-              <div className="avatar av3"/>
+              <img src="https://i.pravatar.cc/100?img=10" alt="User 1" className="avatar" />
+              <img src="https://i.pravatar.cc/100?img=11" alt="User 2" className="avatar" />
+              <img src="https://i.pravatar.cc/100?img=12" alt="User 3" className="avatar" />
             </div>
             <div>
-              <div className="stars">★★★★★</div>
+              <div className="stars">
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+                <i className='bx bxs-star'></i>
+              </div>
               <div className="trust-label">Trustpilot</div>
             </div>
           </div>
         </div>
 
-        {/* Right — Stats */}
+        {/* Center — Rocket Laptop */}
+        <div className="stats__center">
+          <img src={rocketImg} alt="Rocket launching from laptop" className="stats__rocket-img" />
+        </div>
+
+        {/* Right — Stats Cards */}
         <div className="stats__right">
-          <div className="stats__grid">
-            {stats.map((s, i) => (
-              <div className="stat-card" key={i}>
-                <div className="stat-card__num">{s.num}</div>
-                <div className="stat-card__label">{s.label}</div>
-                <p className="stat-card__desc">
-                  Lorem dolor amet consectetur adipiscing eiusmod elit, sed do tempor.
-                </p>
-              </div>
-            ))}
+          <div className="stat-card">
+            <div className="stat-card__num">500+</div>
+            <h3 className="stat-card__label">Total Project</h3>
+            <p className="stat-card__desc">
+              Lorem dolor amet consectetur read adipiscing any more elit.
+            </p>
           </div>
 
-          {/* Rocket Illustration */}
-          <div className="stats__rocket">
-            <div className="rocket-emoji">🚀</div>
-            <div className="rocket-rings">
-              <div className="ring ring-1"/>
-              <div className="ring ring-2"/>
-              <div className="ring ring-3"/>
-            </div>
-            <div className="floating-icons">
-              <span>📊</span>
-              <span>💡</span>
-              <span>📱</span>
-              <span>🎯</span>
-            </div>
+          <div className="stat-card">
+            <div className="stat-card__num">300M+</div>
+            <h3 className="stat-card__label">Investment</h3>
+            <p className="stat-card__desc">
+              Lorem dolor amet consectetur read adipiscing any more elit.
+            </p>
           </div>
         </div>
       </div>

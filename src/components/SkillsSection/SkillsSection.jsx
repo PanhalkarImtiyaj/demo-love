@@ -1,12 +1,9 @@
 import womanImg from '../../assets/skills-woman.png';
 import './SkillsSection.css';
 
-const skills = [
-  { label: 'Paid Search Marketing', percent: 65 },
-  { label: 'Search Engine Optimization', percent: 95 },
-];
-
 export default function SkillsSection() {
+  const circ = 2 * Math.PI * 34; // Circumference of radius 34
+
   return (
     <section className="skills" id="about">
       <div className="skills__inner">
@@ -14,6 +11,10 @@ export default function SkillsSection() {
         <div className="skills__img-wrap">
           <div className="skills__img-bg" />
           <img src={womanImg} alt="Professional woman with tablet" className="skills__img" />
+          
+          {/* Target illustration decoration in the screenshot */}
+          <div className="skills__deco-target">🎯</div>
+          
           <div className="skills__floating-card">
             <div className="floating-card__icon">📈</div>
             <div>
@@ -31,25 +32,58 @@ export default function SkillsSection() {
           </h2>
           <p className="skills__desc">
             It is a long established fact that a reader will be distracted by the readable content of a page
-            when looking at point established the line.
+            when looking at layout the point established fact that
           </p>
 
-          {/* Progress Bars */}
-          <div className="skills__bars">
-            {skills.map((s, i) => (
-              <div className="skill-bar" key={i}>
-                <div className="skill-bar__header">
-                  <span className="skill-bar__label">{s.label}</span>
-                  <span className="skill-bar__pct">{s.percent}%</span>
-                </div>
-                <div className="skill-bar__track">
-                  <div
-                    className="skill-bar__fill"
-                    style={{ width: `${s.percent}%` }}
+          {/* Progress Circles */}
+          <div className="skills__circles">
+            <div className="skill-circle-item">
+              <div className="circle-container">
+                <svg width="80" height="80">
+                  <circle cx="40" cy="40" r="34" stroke="#f1f5f9" strokeWidth="5" fill="transparent" />
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="34"
+                    stroke="#7c3aed"
+                    strokeWidth="5"
+                    fill="transparent"
+                    strokeDasharray={circ}
+                    strokeDashoffset={circ * (1 - 0.65)}
+                    strokeLinecap="round"
+                    transform="rotate(-90 40 40)"
                   />
-                </div>
+                </svg>
+                <span className="circle-percent">65%</span>
               </div>
-            ))}
+              <div className="circle-info">
+                <span className="circle-title">Paid Search<br/>Marketing</span>
+              </div>
+            </div>
+
+            <div className="skill-circle-item">
+              <div className="circle-container">
+                <svg width="80" height="80">
+                  <circle cx="40" cy="40" r="34" stroke="#f1f5f9" strokeWidth="5" fill="transparent" />
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="34"
+                    stroke="#7c3aed"
+                    strokeWidth="5"
+                    fill="transparent"
+                    strokeDasharray={circ}
+                    strokeDashoffset={circ * (1 - 0.95)}
+                    strokeLinecap="round"
+                    transform="rotate(-90 40 40)"
+                  />
+                </svg>
+                <span className="circle-percent">95%</span>
+              </div>
+              <div className="circle-info">
+                <span className="circle-title">Search Engine<br/>Optimization</span>
+              </div>
+            </div>
           </div>
 
           <a href="#contact" className="skills__btn">

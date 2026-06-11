@@ -301,7 +301,7 @@
   /* BOOST NOW behind GO FOR ADVERTISING — perfectly centered */
   .hero__boost {
     position: absolute;
-    top: 74px; /* Positioned perfectly behind GO FOR ADVERTISING tag */
+    top: 66px; /* Positioned perfectly behind GO FOR ADVERTISING tag */
     left: 50%;
     transform: translateX(-50%);
     font-size: clamp(48px, 12vw, 64px);
@@ -325,7 +325,7 @@
   }
   .hero__title {
     font-size: clamp(28px, 9vw, 42px);
-    margin-top: 0;
+    margin-top: 36px; /* Push content perfectly below BOOST NOW text area */
     margin-bottom: 8px;
     line-height: 1.1;
   }

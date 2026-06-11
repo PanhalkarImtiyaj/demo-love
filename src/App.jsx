@@ -7,6 +7,7 @@ import BrandsSection    from './components/BrandsSection/BrandsSection';
 import SkillsSection    from './components/SkillsSection/SkillsSection';
 import CaseStudiesSection from './components/CaseStudiesSection/CaseStudiesSection';
 import StatsSection     from './components/StatsSection/StatsSection';
+import Chatbot          from './components/Chatbot/Chatbot';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <SkillsSection />
       <CaseStudiesSection />
       <StatsSection />
+      <Chatbot />
     </>
   );
 }

@@ -1,12 +1,6 @@
 import caseImg from '../../assets/case-study.png';
+import heroManDeco from '../../assets/hero-ma\'n.png';
 import './CaseStudiesSection.css';
-
-const caseCards = [
-  { label: 'Digital Marketing', color: '#7c3aed', bg: '#ede9fe' },
-  { label: 'Instantly Analysis', color: '#0ea5e9', bg: '#e0f2fe' },
-  { label: 'Web & Mobile', color: '#10b981', bg: '#d1fae5' },
-  { label: 'Email Marketing', color: '#f59e0b', bg: '#fef3c7' },
-];
 
 export default function CaseStudiesSection() {
   return (
@@ -14,50 +8,78 @@ export default function CaseStudiesSection() {
       <div className="cases__inner">
         {/* Header Row */}
         <div className="cases__header">
-          <div>
+          <div className="cases__header-left">
             <span className="cases__tag">CASE STUDIES</span>
             <h2 className="cases__title">
               We Are A Creative Digital<br/>Marketing Agency
             </h2>
           </div>
           <a href="#" className="cases__btn">
-            EXPLORE MORE <span className="btn-arrow-dark">→</span>
+            EXPLORE MORE <span className="btn-arrow">→</span>
           </a>
         </div>
 
-        {/* Cards Grid */}
-        <div className="cases__grid">
-          {/* Main big card */}
-          <div className="case-main-card">
-            <div className="case-main-card__top">
-              <span className="case-tag-chip">Rising Stars Obscure</span>
-              <img src={caseImg} alt="Case Study" className="case-main-img" />
-            </div>
-            <div className="case-main-card__footer">
-              <span>📊 Analytics</span>
-              <span>🎯 Strategy</span>
-              <button className="case-main-card__btn">+</button>
-            </div>
-          </div>
+        {/* Horizontal Row Wrapper */}
+        <div className="cases__row-container">
+          {/* Decorative Character sitting on the left */}
+          <img src={heroManDeco} alt="Character Decoration" className="cases__deco-character" />
 
-          {/* Side cards */}
-          <div className="case-side-cards">
-            {caseCards.map((c, i) => (
-              <div
-                className="case-side-card"
-                key={i}
-                style={{ background: c.bg, borderLeft: `4px solid ${c.color}` }}
-              >
-                <div className="case-side-card__dot" style={{ background: c.color }} />
-                <span style={{ color: c.color, fontWeight: 700, fontSize: '0.82rem' }}>
-                  {c.label}
-                </span>
-                <p className="case-side-card__desc">
-                  Lorem dolor amet consectetur adipiscing eiusmod.
-                </p>
-                <button className="case-side-card__btn" style={{ color: c.color }}>+</button>
+          <div className="cases__cards-row">
+            {/* 1. Main SEO Card */}
+            <div className="case-card case-card--main">
+              <div className="case-card__image-container">
+                <span className="case-card__chip">Rising Stars Obscure</span>
+                <img src={caseImg} alt="SEO Case Study" className="case-card__img" />
               </div>
-            ))}
+              <div className="case-card__footer">
+                <span className="footer-tag">📊 Analytics</span>
+                <span className="footer-tag">🎯 Strategy</span>
+                <span className="case-card__badge-num">01</span>
+                <button className="case-card__plus-btn">+</button>
+              </div>
+            </div>
+
+            {/* 2. Vertical Purple Card: Digital Marketing */}
+            <div className="case-card case-card--vertical">
+              <div className="vertical-text-wrap">
+                <span className="vertical-title">Digital Marketing</span>
+              </div>
+              <div className="vertical-footer">
+                <span className="vertical-num">02</span>
+              </div>
+            </div>
+
+            {/* 3. Vertical Purple Card: Instantly Analyze */}
+            <div className="case-card case-card--vertical">
+              <div className="vertical-text-wrap">
+                <span className="vertical-title">Instantly Analyze</span>
+              </div>
+              <div className="vertical-footer">
+                <span className="vertical-num">03</span>
+              </div>
+            </div>
+
+            {/* 4. Wide Detail Card: Web & Mobile */}
+            <div className="case-card case-card--detail">
+              <span className="detail-tag-num">04</span>
+              <div className="detail-content">
+                <h3 className="detail-title">Web & Mobile</h3>
+                <p className="detail-desc">
+                  Representing your brand in the digital world with custom design.
+                </p>
+                <a href="#" className="detail-link">Read More →</a>
+              </div>
+            </div>
+
+            {/* 5. Vertical Purple Card: Email Marketing */}
+            <div className="case-card case-card--vertical">
+              <div className="vertical-text-wrap">
+                <span className="vertical-title">Email Marketing</span>
+              </div>
+              <div className="vertical-footer">
+                <span className="vertical-num">05</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
