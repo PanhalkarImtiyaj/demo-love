@@ -109,9 +109,8 @@
   .navbar__links.open { display: flex; }
   .navbar__hamburger { display: flex; }
 
-  /* Prevent logo & cta elements from pushing hamburger off screen */
   .navbar__logo-img {
-    height: 48px; /* scale down the wide logo on tablets/mobiles */
+    height: 46px; /* scale down the wide logo on tablets/mobiles */
   }
   .navbar__inner {
     padding: 0 16px;
@@ -127,11 +126,36 @@
 }
 
 @media (max-width: 600px) {
-  /* Hide navbar CTA on small viewports to guarantee hamburger menu is never cropped */
   .navbar__cta {
-    display: none;
+    padding: 6px 12px; /* make CTA compact on mobile screens */
+    font-size: 0.68rem;
   }
   .navbar__logo-img {
-    height: 42px; /* further scale down logo on narrow mobile screens */
+    height: 38px; /* further scale down logo to prevent overflow */
+  }
+  .navbar__inner {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .navbar__right {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Extremely small devices like iPhone SE */
+  .navbar__cta {
+    padding: 5px 10px;
+    font-size: 0.64rem;
+  }
+  .navbar__logo-img {
+    height: 32px;
+  }
+  .navbar__inner {
+    padding: 0 8px;
+    gap: 4px;
+  }
+  .navbar__right {
+    gap: 4px;
   }
 }

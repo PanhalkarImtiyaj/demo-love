@@ -155,8 +155,6 @@
   transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
   overflow: hidden;
   cursor: pointer;
-  opacity: 0;
-  transform: translateY(60px);
   display: flex;
   flex-direction: column;
   height: 100%;
