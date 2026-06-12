@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import womanImg from '../../assets/skills-woman.png';
 import './SkillsSection.css';
 
@@ -85,9 +86,9 @@ export default function SkillsSection() {
             </div>
           </div>
 
-          <a href="#contact" className="skills__btn">
+          <Link to="/about" className="skills__btn">
             EXPLORE MORE <span className="btn-arrow">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
