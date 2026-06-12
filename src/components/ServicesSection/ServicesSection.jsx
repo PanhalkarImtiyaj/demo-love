@@ -96,28 +96,30 @@ export default function ServicesSection() {
         );
       }
 
-      // ── Cards stagger animation ──
-      cardsRef.current.forEach((card, i) => {
-        if (!card) return;
+      // ── Cards stagger entrance animation ──
+      const validCards = cardsRef.current.filter(Boolean);
+      if (validCards.length > 0) {
         gsap.fromTo(
-          card,
-          { opacity: 0, y: 60, scale: 0.95 },
+          validCards,
+          { opacity: 0, y: 40, scale: 0.98 },
           {
             opacity: 1,
             y: 0,
             scale: 1,
-            duration: 0.7,
-            delay: i * 0.12,
-            ease: 'power3.out',
+            duration: 0.45,
+            stagger: 0.08,
+            ease: 'power2.out',
             scrollTrigger: {
-              trigger: card,
-              start: 'top 88%',
+              trigger: '.services__grid',
+              start: 'top 92%',
               toggleActions: 'play none none none',
             },
           }
         );
+      }
 
-        // Advanced mouse move hover effect (tilt & glow)
+      // ── Add mouse hover effects ──
+      validCards.forEach((card) => {
         const handleMouseMove = (e) => {
           const rect = card.getBoundingClientRect();
           const x = e.clientX - rect.left;
@@ -135,7 +137,6 @@ export default function ServicesSection() {
             transformPerspective: 1000,
           });
 
-          // Set custom properties for mouse tracking to build reactive shine
           card.style.setProperty('--mouse-x', `${x}px`);
           card.style.setProperty('--mouse-y', `${y}px`);
         };
@@ -152,7 +153,6 @@ export default function ServicesSection() {
         card.addEventListener('mousemove', handleMouseMove);
         card.addEventListener('mouseleave', handleMouseLeave);
 
-        // Cleanup event listeners stored on the card
         card._cleanup = () => {
           card.removeEventListener('mousemove', handleMouseMove);
           card.removeEventListener('mouseleave', handleMouseLeave);
