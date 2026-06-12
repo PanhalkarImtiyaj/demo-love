@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import founderImg from '../../assets/founder.jpg';
 import './AboutPage.css';
 
 export default function AboutPage() {
@@ -26,12 +27,6 @@ export default function AboutPage() {
   ];
 
   const team = [
-    {
-      name: 'Imtiyaj Panhalkar',
-      role: 'CEO & Principal Software Architect',
-      image: 'https://i.pravatar.cc/150?img=33',
-      bio: 'Over 10 years of experience designing robust distributed systems, microservices, and database solutions.',
-    },
     {
       name: 'Priya Deshmukh',
       role: 'Head of Web Engineering',
@@ -129,10 +124,44 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Standalone Founder Spotlight Card Section */}
+      <section className="about-founder">
+        <div className="about-founder__inner">
+          <div className="founder-spotlight-card">
+            <div className="founder-spotlight-card__image-container">
+              <img src={founderImg} alt="VSS Founder" className="founder-spotlight-card__img" />
+              <div className="image-overlay-glow" />
+            </div>
+
+            <div className="founder-spotlight-card__content">
+              <span className="founder-badge">
+                <i className="bx bxs-award animate-pulse" /> Our Founder
+              </span>
+              <h2 className="founder-name">Imtiyaj Panhalkar</h2>
+              <span className="founder-title">CEO & Principal Software Architect</span>
+              <div className="founder-divider" />
+              
+              <blockquote className="founder-quote">
+                "Scaling systems requires building strong technical foundations. At VSS Software Solutions, we design cloud architectures and engineer interfaces that not only solve current business challenges but are ready for global workloads."
+              </blockquote>
+
+              <p className="founder-bio">
+                Under Imtiyaj's leadership, VSS Software Solutions has scaled from a regional consultancy into a trusted global technology provider, delivering custom CRM/ERP backends, Flutter mobile configurations, and secure DevSecOps pipelines for high-traffic startups and enterprise clients.
+              </p>
+
+              <div className="founder-socials">
+                <a href="#" className="founder-social-link"><i className="bx bxl-linkedin" /> LinkedIn</a>
+                <a href="#" className="founder-social-link"><i className="bx bxl-github" /> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Leadership Team */}
       <section className="about-team">
         <div className="about-team__inner">
-          <h2 className="section-title text-center">Meet Our <span>Leaders</span></h2>
+          <h2 className="section-title text-center">Our Engineering <span>Leaders</span></h2>
           <p className="section-desc text-center">Experienced software engineers and project coordinators dedicated to project success.</p>
           <div className="team-grid">
             {team.map((t, i) => (
