@@ -108,4 +108,30 @@
   }
   .navbar__links.open { display: flex; }
   .navbar__hamburger { display: flex; }
+
+  /* Prevent logo & cta elements from pushing hamburger off screen */
+  .navbar__logo-img {
+    height: 48px; /* scale down the wide logo on tablets/mobiles */
+  }
+  .navbar__inner {
+    padding: 0 16px;
+    gap: 12px;
+  }
+  .navbar__right {
+    gap: 10px;
+  }
+  .navbar__cta {
+    padding: 8px 16px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Hide navbar CTA on small viewports to guarantee hamburger menu is never cropped */
+  .navbar__cta {
+    display: none;
+  }
+  .navbar__logo-img {
+    height: 42px; /* further scale down logo on narrow mobile screens */
+  }
 }

@@ -65,6 +65,15 @@ export default function ServicesSection() {
   const ctaRef = useRef(null);
 
   useEffect(() => {
+    // Check if the screen width indicates mobile (max 900px)
+    const isMobile = window.innerWidth <= 900;
+    
+    // Disable animations and listener attachments on mobile devices to prevent
+    // opacity/layout freeze issues on mobile viewports.
+    if (isMobile) {
+      return;
+    }
+
     const ctx = gsap.context(() => {
       // ── Header animation ──
       const headerEls = headerRef.current?.children;
