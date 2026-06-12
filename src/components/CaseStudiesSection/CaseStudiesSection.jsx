@@ -32,8 +32,8 @@ export default function CaseStudiesSection() {
                 <img src={caseImg} alt="SEO Case Study" className="case-card__img" />
               </div>
               <div className="case-card__footer">
-                <span className="footer-tag">📊 Analytics</span>
-                <span className="footer-tag">🎯 Strategy</span>
+                <span className="footer-tag"><i className="bx bx-bar-chart-alt-2" style={{ marginRight: '4px' }} /> Analytics</span>
+                <span className="footer-tag"><i className="bx bx-target-lock" style={{ marginRight: '4px' }} /> Strategy</span>
                 <span className="case-card__badge-num">01</span>
                 <button className="case-card__plus-btn">+</button>
               </div>

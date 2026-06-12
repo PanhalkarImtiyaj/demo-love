@@ -13,10 +13,10 @@ export default function SkillsSection() {
           <img src={womanImg} alt="Professional woman with tablet" className="skills__img" />
           
           {/* Target illustration decoration in the screenshot */}
-          <div className="skills__deco-target">🎯</div>
+          <div className="skills__deco-target"><i className="bx bx-target-lock" /></div>
           
           <div className="skills__floating-card">
-            <div className="floating-card__icon">📈</div>
+            <div className="floating-card__icon"><i className="bx bx-trending-up" /></div>
             <div>
               <div className="floating-card__num">+120%</div>
               <div className="floating-card__label">Growth Rate</div>
@@ -28,11 +28,10 @@ export default function SkillsSection() {
         <div className="skills__content">
           <span className="skills__tag">ABOUT COMPANY</span>
           <h2 className="skills__title">
-            Skills To Improve Your<br/>Company Brand
+            We Are Experts In Marketing<br/>& Software Development
           </h2>
           <p className="skills__desc">
-            It is a long established fact that a reader will be distracted by the readable content of a page
-            when looking at layout the point established fact that
+            VSS Software is a premier agency specializing in cutting-edge web/app creation, custom software systems, AI automation, and data-driven marketing. We are committed to empowering brands with modern, scalable technology solutions.
           </p>
 
           {/* Progress Circles */}
@@ -49,15 +48,15 @@ export default function SkillsSection() {
                     strokeWidth="5"
                     fill="transparent"
                     strokeDasharray={circ}
-                    strokeDashoffset={circ * (1 - 0.65)}
+                    strokeDashoffset={circ * (1 - 0.85)}
                     strokeLinecap="round"
                     transform="rotate(-90 40 40)"
                   />
                 </svg>
-                <span className="circle-percent">65%</span>
+                <span className="circle-percent">85%</span>
               </div>
               <div className="circle-info">
-                <span className="circle-title">Paid Search<br/>Marketing</span>
+                <span className="circle-title">Digital Marketing<br/>& SEO Strategy</span>
               </div>
             </div>
 
@@ -81,7 +80,7 @@ export default function SkillsSection() {
                 <span className="circle-percent">95%</span>
               </div>
               <div className="circle-info">
-                <span className="circle-title">Search Engine<br/>Optimization</span>
+                <span className="circle-title">Software & App<br/>Development</span>
               </div>
             </div>
           </div>
