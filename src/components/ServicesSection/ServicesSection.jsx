@@ -47,13 +47,13 @@ const services = [
   },
   {
     image: digitalMarketingImg,
-    icon: 'bx bx-bar-chart-alt-2',
-    title: 'Digital Marketing',
-    desc: 'Data-driven marketing strategies that boost your brand visibility and drive conversions.',
+    icon: 'bx bx-cloud',
+    title: 'Cloud & DevOps',
+    desc: 'Scalable cloud deployment, continuous integration, and robust infrastructure monitoring for modern applications.',
     features: [
-      'SEO & High-Value Content Strategy',
-      'Targeted Social Media Campaigns',
-      'Advanced PPC & Analytics',
+      'AWS & Azure Server Deployments',
+      'CI/CD Pipelines & DevOps Automation',
+      '24/7 Server Management & Security',
     ],
   },
 ];
@@ -212,7 +212,7 @@ export default function ServicesSection() {
             Exceptional Solutions <span>Tailored For You</span>
           </h2>
           <p className="services__subtitle">
-            We deliver state-of-the-art web applications, custom software, mobile apps, and marketing strategies to grow your business globally.
+            We deliver state-of-the-art web applications, custom software, mobile apps, and scalable cloud systems to grow your business globally.
           </p>
         </div>
 

@@ -1,0 +1,310 @@
+/* ==========================================================================
+   PROCESS SECTION STYLING (Lifecycle Timeline)
+   ========================================================================== */
+
+.process {
+  position: relative;
+  background: #ffffff;
+  padding: 120px 24px;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+html.dark .process {
+  background: #0f172a;
+}
+
+.process__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow Decoration */
+.process__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.process__glow--1 {
+  width: 300px;
+  height: 300px;
+  background: #2563eb;
+  top: 20%;
+  left: -150px;
+}
+
+.process__glow--2 {
+  width: 350px;
+  height: 350px;
+  background: #7c3aed;
+  bottom: 20%;
+  right: -150px;
+}
+
+html.dark .process__glow {
+  opacity: 0.12;
+}
+
+/* Header */
+.process__header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.process__tag-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+}
+
+.process__title {
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 850;
+  color: #0f172a;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  margin: 0 0 18px 0;
+}
+
+html.dark .process__title {
+  color: #ffffff;
+}
+
+.process__title span {
+  background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.process__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475569;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+html.dark .process__subtitle {
+  color: #94a3b8;
+}
+
+/* Pipeline Connector Layout */
+.process__pipeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Central vertical connecting line */
+.process__line-connector {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, #7c3aed, #2563eb, #3b82f6);
+  transform: translateX(-50%);
+  opacity: 0.15;
+}
+
+/* Step content card block */
+.process__step-card {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  position: relative;
+  padding-right: 45px;
+  transition: all 0.3s ease;
+}
+
+.process__step-card.reverse {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 45px;
+}
+
+/* Connecting Step Node dot */
+.step-node {
+  position: absolute;
+  right: -8px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  z-index: 5;
+}
+
+.process__step-card.reverse .step-node {
+  left: -8px;
+  right: auto;
+}
+
+.step-node__dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #7c3aed;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  z-index: 2;
+  border: 2px solid #ffffff;
+}
+
+html.dark .step-node__dot {
+  border-color: #0f172a;
+}
+
+.step-node__pulse {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: #7c3aed;
+  opacity: 0.3;
+  animation: pulse-ring 2.2s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Card Content details box */
+.step-content {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+html.dark .step-content {
+  background: rgba(30, 41, 59, 0.4);
+  border-color: rgba(51, 65, 85, 0.5);
+  backdrop-filter: blur(12px);
+}
+
+.step-content:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 58, 237, 0.25);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+}
+
+html.dark .step-content:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Card Header elements */
+.step-content__badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+.step-content__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.step-content__icon-wrap {
+  width: 44px;
+  height: 44px;
+  background: rgba(124, 58, 237, 0.06);
+  border: 1px dashed rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c3aed;
+  font-size: 1.35rem;
+}
+
+.step-content__num {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.step-content__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+html.dark .step-content__title {
+  color: #f8fafc;
+}
+
+.step-content__desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+html.dark .step-content__desc {
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .process {
+    padding: 80px 20px;
+  }
+  
+  .process__line-connector {
+    left: 20px;
+    transform: none;
+  }
+
+  .process__step-card {
+    width: 100%;
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 45px;
+  }
+
+  .process__step-card.reverse {
+    align-self: flex-start;
+    padding-left: 45px;
+  }
+
+  .step-node {
+    left: 14px !important;
+    right: auto !important;
+  }
+}

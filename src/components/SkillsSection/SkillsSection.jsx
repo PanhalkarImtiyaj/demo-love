@@ -28,10 +28,10 @@ export default function SkillsSection() {
         <div className="skills__content">
           <span className="skills__tag">ABOUT COMPANY</span>
           <h2 className="skills__title">
-            We Are Experts In Marketing<br/>& Software Development
+            We Are Experts In Software<br/>& Custom IT Solutions
           </h2>
           <p className="skills__desc">
-            VSS Software is a premier agency specializing in cutting-edge web/app creation, custom software systems, AI automation, and data-driven marketing. We are committed to empowering brands with modern, scalable technology solutions.
+            VSS Software Solutions is a premier technology provider specializing in cutting-edge web & mobile applications, custom enterprise software, AI automation, and scalable cloud systems. We empower businesses globally with robust technical architectures.
           </p>
 
           {/* Progress Circles */}
@@ -56,7 +56,7 @@ export default function SkillsSection() {
                 <span className="circle-percent">85%</span>
               </div>
               <div className="circle-info">
-                <span className="circle-title">Digital Marketing<br/>& SEO Strategy</span>
+                <span className="circle-title">Cloud Computing<br/>& Cyber Security</span>
               </div>
             </div>
 

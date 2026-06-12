@@ -14,18 +14,16 @@ export default function HeroSection() {
 
   return (
     <section className="hero" id="home">
-      {/* Big BOOST NOW background heading */}
-      <div className="hero__boost">BOOST NOW</div>
+      {/* Big INNOVATE background heading */}
+      <div className="hero__boost">INNOVATE</div>
 
       <div className="hero__inner">
         {/* Left Content */}
         <div className="hero__content">
-          <span className="hero__tag">GO FOR ADVERTISING</span>
-          <h1 className="hero__title">Think Digital</h1>
+          <span className="hero__tag">IT SOLUTIONS & SERVICES</span>
+          <h1 className="hero__title">Innovate & Scale</h1>
           <p className="hero__desc">
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form by injected
-            humour, or randomised.
+            VSS Software Solutions is your trusted technology partner. We build robust architectures, scalable cloud infrastructure, and modern applications tailored to your business needs.
           </p>
           <div className="hero__actions">
             <a href="#services" className="hero__btn-primary">
@@ -60,12 +58,12 @@ export default function HeroSection() {
         {/* Center Image */}
         <div className="hero__image-wrap">
           <div className="hero__badge">
-            <span>BOOST<br/>NOW</span>
+            <span>TECH<br/>NOW</span>
           </div>
-          <img src={heroMan} alt="Digital Marketing Hero" className="hero__img" />
+          <img src={heroMan} alt="IT Solutions Hero" className="hero__img" />
           <div className="hero__floating-tag">
             <span className="pulse-dot"/>
-            There are many variations of passages of Lorem Ipsum
+            Scalable architectures built for global businesses
           </div>
         </div>
 

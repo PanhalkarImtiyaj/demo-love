@@ -1,57 +1,98 @@
-import rocketImg from '../../assets/rocket.png';
 import './StatsSection.css';
 
 export default function StatsSection() {
+  const metrics = [
+    {
+      value: '500+',
+      label: 'Projects Delivered',
+      desc: 'High-performance web apps, custom software, and robust mobile systems engineered globally.',
+      icon: 'bx bx-code-block',
+      progress: 95,
+      color: '#7c3aed',
+    },
+    {
+      value: '99.99%',
+      label: 'Service SLA Uptime',
+      desc: 'Delivering continuous server availability and robust DevOps deployment pipelines on AWS & Azure.',
+      icon: 'bx bx-server',
+      progress: 99,
+      color: '#3b82f6',
+    },
+    {
+      value: '25+',
+      label: 'Countries Served',
+      desc: 'Helping enterprise clients and growing startups scale operations across North America, Europe, & Asia.',
+      icon: 'bx bx-globe',
+      progress: 80,
+      color: '#10b981',
+    },
+    {
+      value: '10M+',
+      label: 'Daily API Requests',
+      desc: 'Architecting high-frequency databases and scalable backend clusters built to handle heavy traffic.',
+      icon: 'bx bx-chip',
+      progress: 90,
+      color: '#f59e0b',
+    },
+  ];
+
   return (
-    <section className="stats" id="contact">
+    <section className="stats" id="stats">
+      {/* Grid line grid overlay background */}
+      <div className="stats__grid-overlay" />
+
       <div className="stats__inner">
-        {/* Left Content */}
-        <div className="stats__left">
-          <span className="stats__tag">SUCCESS STORIES</span>
-          <h2 className="stats__title">
-            Organic Audience<br/>Driven On Your<br/>Websites
-          </h2>
-          <div className="stats__trust">
-            <div className="trust-avatars">
-              <img src="https://i.pravatar.cc/100?img=10" alt="User 1" className="avatar" />
-              <img src="https://i.pravatar.cc/100?img=11" alt="User 2" className="avatar" />
-              <img src="https://i.pravatar.cc/100?img=12" alt="User 3" className="avatar" />
-            </div>
-            <div>
-              <div className="stars">
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
-                <i className='bx bxs-star'></i>
+        {/* Header Row */}
+        <div className="stats__header">
+          <div className="stats__header-left">
+            <span className="stats__tag">
+              <i className="bx bx-analyse" /> System Performance
+            </span>
+            <h2 className="stats__title">
+              Our Technical Footprint <span>In Numbers</span>
+            </h2>
+          </div>
+          <div className="stats__header-right">
+            <p className="stats__subtitle">
+              We leverage modern architectures, containerized environments, and cloud infrastructure to ensure scalability and speed for all operations.
+            </p>
+          </div>
+        </div>
+
+        {/* Dashboard Grid */}
+        <div className="stats__dashboard">
+          {metrics.map((m, index) => (
+            <div className="stat-node-card" key={index}>
+              {/* Card Header */}
+              <div className="stat-node-card__header">
+                <div className="stat-node-card__icon" style={{ color: m.color, background: `${m.color}10`, borderColor: `${m.color}25` }}>
+                  <i className={m.icon} />
+                </div>
+                <span className="stat-node-card__pulse">
+                  <span className="pulse-dot" style={{ backgroundColor: m.color }} />
+                  Live Syncing
+                </span>
               </div>
-              <div className="trust-label">Trustpilot</div>
+
+              {/* Number and Label */}
+              <div className="stat-node-card__body">
+                <div className="stat-node-card__num">{m.value}</div>
+                <h3 className="stat-node-card__label">{m.label}</h3>
+                <p className="stat-node-card__desc">{m.desc}</p>
+              </div>
+
+              {/* Visual Performance Meter */}
+              <div className="stat-node-card__footer">
+                <div className="meter-info">
+                  <span>Efficiency Index</span>
+                  <span>{m.progress}%</span>
+                </div>
+                <div className="meter-track">
+                  <div className="meter-bar" style={{ width: `${m.progress}%`, backgroundColor: m.color }} />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Center — Rocket Laptop */}
-        <div className="stats__center">
-          <img src={rocketImg} alt="Rocket launching from laptop" className="stats__rocket-img" />
-        </div>
-
-        {/* Right — Stats Cards */}
-        <div className="stats__right">
-          <div className="stat-card">
-            <div className="stat-card__num">500+</div>
-            <h3 className="stat-card__label">Total Project</h3>
-            <p className="stat-card__desc">
-              Lorem dolor amet consectetur read adipiscing any more elit.
-            </p>
-          </div>
-
-          <div className="stat-card">
-            <div className="stat-card__num">300M+</div>
-            <h3 className="stat-card__label">Investment</h3>
-            <p className="stat-card__desc">
-              Lorem dolor amet consectetur read adipiscing any more elit.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ export default function Chatbot() {
     { label: 'Web Dev', icon: 'bx bx-globe', text: 'Tell me about Web Development services' },
     { label: 'App Dev', icon: 'bx bx-mobile-alt', text: 'Tell me about App Development services' },
     { label: 'Custom Software', icon: 'bx bx-code-block', text: 'Tell me about Custom Software' },
-    { label: 'Marketing', icon: 'bx bx-bar-chart-alt-2', text: 'Tell me about Digital Marketing & SEO' },
+    { label: 'Cloud & DevOps', icon: 'bx bx-cloud', text: 'Tell me about Cloud & DevOps services' },
     { label: 'WhatsApp Chat', icon: 'bx bxl-whatsapp', text: 'whatsapp_direct_contact' },
   ];
 
@@ -39,7 +39,7 @@ export default function Chatbot() {
       cleanText === 'hy' ||
       cleanText === 'hola'
     ) {
-      return 'Hello! Welcome to VSS Software. How can I assist you with your digital goals today? Feel free to ask about our services: Web, Mobile App, Custom Software, or Digital Marketing.';
+      return 'Hello! Welcome to VSS Software. How can I assist you with your digital goals today? Feel free to ask about our services: Web, Mobile App, Custom Software, or Cloud & DevOps.';
     }
 
     if (
@@ -76,14 +76,14 @@ export default function Chatbot() {
     }
 
     if (
-      cleanText.includes('marketing') ||
-      cleanText.includes('seo') ||
-      cleanText.includes('digital') ||
-      cleanText.includes('ads') ||
-      cleanText.includes('social') ||
-      cleanText.includes('google')
+      cleanText.includes('cloud') ||
+      cleanText.includes('devops') ||
+      cleanText.includes('cyber') ||
+      cleanText.includes('security') ||
+      cleanText.includes('aws') ||
+      cleanText.includes('azure')
     ) {
-      return 'Our digital marketing services include advanced SEO (Search Engine Optimization) to rank you on Google, social media campaigns, PPC advertising, and data analytics to maximize your ROI.';
+      return 'VSS Software Solutions specializes in robust cloud architectures (AWS/Azure), continuous integration and deployments (DevOps), infrastructure scaling, and end-to-end cyber security hardening.';
     }
 
     if (
@@ -115,7 +115,7 @@ export default function Chatbot() {
       cleanText.includes('provide') ||
       cleanText.includes('support')
     ) {
-      return "I can guide you with VSS Software services: Web Development 🌐, App Development 📱, Custom Software 💻, and Digital Marketing 📈. Type any of these to learn more, or type 'Contact' to speak to our representative.";
+      return "I can guide you with VSS Software services: Web Development 🌐, App Development 📱, Custom Software 💻, and Cloud & DevOps ☁️. Type any of these to learn more, or type 'Contact' to speak to our representative.";
     }
 
     if (cleanText.includes('panhalkar')) {
