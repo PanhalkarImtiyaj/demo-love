@@ -13,9 +13,14 @@
 .cases__header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center; /* aligned center to support tabs row */
   margin-bottom: 50px;
   gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cases__header-left {
+  flex-shrink: 0;
 }
 
 .cases__tag {
@@ -37,6 +42,40 @@
   color: #1e1b4b;
   line-height: 1.2;
   margin: 0;
+}
+
+/* Category Filter Tabs */
+.cases__tabs {
+  display: flex;
+  background: #f3f4f6;
+  padding: 5px;
+  border-radius: 50px;
+  gap: 4px;
+  margin: 0 auto;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.case-tab-btn {
+  background: none;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.case-tab-btn:hover {
+  color: #1f2937;
+}
+
+.case-tab-btn.active {
+  background: #7c3aed;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
 .cases__btn {
@@ -69,12 +108,13 @@
 /* Megaphone Guy Decoration sitting on bottom-left */
 .cases__deco-character {
   position: absolute;
-  left: -20px;
-  bottom: -10px;
-  height: 150px;
+  left: -10px;
+  bottom: -24px;
+  height: 165px;
   width: auto;
   z-index: 10;
   pointer-events: none;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.18));
 }
 
 /* Horizontal Cards Slider */
@@ -82,7 +122,7 @@
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  padding: 10px 10px 20px 80px; /* Left padding creates space for the character guy */
+  padding: 10px 10px 20px 90px; /* Left padding creates space for the character guy */
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
@@ -103,12 +143,19 @@
   height: 330px;
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
 }
 
-.case-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.08);
+/* Filtering Transitions (Dim vs Match) */
+.case-card.dim {
+  opacity: 0.15;
+  filter: grayscale(80%) blur(1px);
+  pointer-events: none;
+}
+
+.case-card.match {
+  opacity: 1;
+  filter: none;
 }
 
 /* 1. Main SEO Card */
@@ -147,6 +194,11 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.95;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.case-card--main:hover .case-card__img {
+  transform: scale(1.04);
 }
 
 .case-card__footer {
@@ -192,7 +244,7 @@
   background: #6d28d9;
 }
 
-/* 2. Vertical purple cards */
+/* 2. Vertical purple cards (Interactive Accordion) */
 .case-card--vertical {
   width: 76px;
   min-width: 76px;
@@ -205,11 +257,22 @@
   color: #fff;
 }
 
+.case-card--vertical:hover {
+  width: 170px;
+  min-width: 170px;
+  background: #6d28d9;
+  box-shadow: 0 12px 30px rgba(109, 40, 217, 0.25);
+}
+
 .vertical-text-wrap {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 10px;
+  gap: 12px;
+  width: 100%;
 }
 
 .vertical-title {
@@ -219,6 +282,28 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   white-space: nowrap;
+  transition: transform 0.4s ease;
+}
+
+.case-card--vertical:hover .vertical-title {
+  transform: rotate(180deg) scale(1.05);
+}
+
+.vertical-desc {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+.case-card--vertical:hover .vertical-desc {
+  opacity: 1;
+  max-height: 110px;
 }
 
 .vertical-footer {
@@ -294,14 +379,21 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+  .cases__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cases__tabs {
+    margin: 16px 0;
+  }
+}
+
 @media (max-width: 900px) {
   .cases {
     padding: 60px 20px;
   }
   .cases__header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
     margin-bottom: 30px;
   }
   .cases__cards-row {
