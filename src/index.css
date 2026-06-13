@@ -55,6 +55,11 @@ html.dark {
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 90px;
+  scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
