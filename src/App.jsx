@@ -28,16 +28,30 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  useEffect(() => {
     if (!hash) {
+      // Scroll to top instantly
       window.scrollTo(0, 0);
+      
+      // Secondary deferred scroll to ensure any asynchronous layouts render at top
+      const timer = setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 0);
+      return () => clearTimeout(timer);
     } else {
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }, 100);
+      return () => clearTimeout(timer);
     }
   }, [pathname, hash]);
 
