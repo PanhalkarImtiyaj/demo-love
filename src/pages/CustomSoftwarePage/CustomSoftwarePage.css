@@ -1,0 +1,268 @@
+/* Custom Software Specific Styles */
+
+.custom-software-page .text-gradient {
+  background: linear-gradient(135deg, #c084fc 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+/* Alternating Panels Styling */
+.panels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.panel-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  text-align: left;
+}
+
+.panel-item.reverse {
+  direction: rtl;
+}
+
+.panel-item.reverse .panel-item__text {
+  direction: ltr; /* Reset text direction back to normal */
+}
+
+.panel-item__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.panel-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #7c3aed;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.panel-item__text h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.panel-item__text p {
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.panel-item__graphic {
+  height: 280px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.bg-gradient-purple {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+}
+
+.bg-gradient-indigo {
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%);
+}
+
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+}
+
+.floating-panel-icon {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.25);
+  animation: floatIcon 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatIcon {
+  from { transform: translateY(0) rotate(0deg); }
+  to { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Security Compliance Credentials Panel */
+.compliance-section {
+  padding: 80px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.compliance-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.compliance-card-accent {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.02);
+}
+
+.compliance-card-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+}
+
+.card-shield-icon {
+  font-size: 3rem;
+  color: #7c3aed;
+}
+
+.compliance-card-header h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.compliance-card-header p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.compliance-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.check-list-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.check-list-item i {
+  font-size: 1.4rem;
+  color: #10b981;
+  margin-top: 2px;
+}
+
+.check-list-item h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.check-list-item p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Sprint Roadmap Layout */
+.sprint-roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roadmap-phase {
+  display: flex;
+  gap: 32px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 30px;
+  border-radius: 20px;
+  align-items: flex-start;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.roadmap-phase:hover {
+  background: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.04);
+}
+
+.phase-marker {
+  background: #7c3aed;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+
+.phase-details h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.phase-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phase-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.phase-bullets li::before {
+  content: '•';
+  color: #7c3aed;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+@media (max-width: 991px) {
+  .panel-item, .panel-item.reverse {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    direction: ltr;
+  }
+  .panel-item__graphic {
+    height: 200px;
+  }
+  .compliance-card-accent {
+    padding: 24px;
+  }
+  .compliance-checklist-grid {
+    grid-template-columns: 1fr;
+  }
+  .roadmap-phase {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

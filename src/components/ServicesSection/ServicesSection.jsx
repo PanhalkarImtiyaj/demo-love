@@ -228,7 +228,7 @@ export default function ServicesSection() {
               
               {/* Service Card Image */}
               <div className="service-card__img-container">
-                <img src={s.image} alt={s.title} className="service-card__image" />
+                <img src={s.image} alt={s.title} className="service-card__image" loading="lazy" />
                 <div className="service-card__image-overlay" />
               </div>
 

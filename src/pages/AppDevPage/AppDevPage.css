@@ -1,0 +1,85 @@
+/* App Development Specific Styles */
+
+.appdev-page .text-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Horizontal Stepper Layout (App Development Process) */
+.horizontal-stepper {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.step-card {
+  flex: 1;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  background: #ffffff;
+  border-color: #10b981;
+  box-shadow: 0 12px 24px rgba(16, 185, 129, 0.05);
+}
+
+.step-card__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.step-card__num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #a7f3d0;
+  transition: color 0.3s ease;
+}
+
+.step-card:hover .step-card__num {
+  color: #10b981;
+}
+
+.step-card__bar {
+  flex-grow: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin-left: 16px;
+}
+
+.step-card:hover .step-card__bar {
+  background: #10b981;
+}
+
+.step-card__body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.step-card__body p {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .horizontal-stepper {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .step-card__bar {
+    display: none;
+  }
+}

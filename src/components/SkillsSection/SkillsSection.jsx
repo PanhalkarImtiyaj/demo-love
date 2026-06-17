@@ -11,7 +11,7 @@ export default function SkillsSection() {
         {/* Left — Image */}
         <div className="skills__img-wrap">
           <div className="skills__img-bg" />
-          <img src={womanImg} alt="Professional woman with tablet" className="skills__img" />
+          <img src={womanImg} alt="Professional woman with tablet" className="skills__img" loading="lazy" />
           
           {/* Target illustration decoration in the screenshot */}
           <div className="skills__deco-target"><i className="bx bx-target-lock" /></div>

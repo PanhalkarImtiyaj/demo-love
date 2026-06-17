@@ -25,8 +25,10 @@ export default function Chatbot() {
 
   // Auto-scroll to bottom of conversation
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isTyping]);
+    if (isOpen) {
+      chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, isTyping, isOpen]);
 
   // Keyword-matching database for perfect responses
   const getAIResponse = (userText) => {

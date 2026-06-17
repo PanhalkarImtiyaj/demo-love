@@ -1,0 +1,158 @@
+/* ERP Software Specific Styles */
+
+.erp-page .text-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Migration Checklists Section */
+.migration-staging-section {
+  padding: 80px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.migration-staging-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.migration-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.migration-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.migration-card:hover {
+  border-color: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.03);
+  transform: translateY(-2px);
+}
+
+.migration-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.migration-num {
+  background: rgba(236, 72, 153, 0.1);
+  color: #ec4899;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.migration-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.migration-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.migration-bullets li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.migration-bullets li i {
+  font-size: 1.1rem;
+  color: #ec4899;
+  margin-top: 2px;
+}
+
+/* Process Flow Layout */
+.erp-process-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flow-step {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 30px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.flow-step:hover {
+  background: #ffffff;
+  border-color: #ec4899;
+  box-shadow: 0 12px 24px rgba(236, 72, 153, 0.04);
+}
+
+.flow-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(236, 72, 153, 0.08);
+  color: #ec4899;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0 auto 20px auto;
+}
+
+.flow-step:hover .flow-badge {
+  background: #ec4899;
+  color: #ffffff;
+}
+
+.flow-step h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.flow-step p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .migration-steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .erp-process-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .erp-process-flow {
+    grid-template-columns: 1fr;
+  }
+}

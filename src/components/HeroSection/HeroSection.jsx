@@ -29,11 +29,11 @@ export default function HeroSection() {
             <a href="#services" className="hero__btn-primary">
               <i className='bx bx-rocket'></i> Get Started
             </a>
-            <a href="#about" className="hero__btn-secondary">
+            <a href="/contact" className="hero__btn-secondary">
               <span className="play-icon">
-                <i className='bx bx-play'></i>
+                <i className='bx bx-calendar-check'></i>
               </span> 
-              Watch Video
+              Free Consultation
             </a>
           </div>
           <div className="hero__trust">
@@ -70,15 +70,23 @@ export default function HeroSection() {
         {/* Right Content */}
         <div className="hero__right">
           <p className="hero__right-text">
-            There Are Many Variations Of Passages Of Lorem Ipsum Available,
-            But The Majority Have Suffered Alteration In Some Form By Injected
-            Humour, or Randomised.
+            We deliver production-ready digital products — from MVP to enterprise scale. Every project is backed by a dedicated architect, agile sprints, and a 100% on-time delivery commitment.
           </p>
-          <div className="hero__play-badge">
-            <div className="play-circle">
-              <i className='bx bx-play'></i>
+          <div className="hero__stats-block">
+            <div className="hero__stat">
+              <span className="hero__stat-num">120+</span>
+              <span className="hero__stat-label">Projects Delivered</span>
             </div>
-            <span>Watch Demo</span>
+            <div className="hero__stat-divider"></div>
+            <div className="hero__stat">
+              <span className="hero__stat-num">98%</span>
+              <span className="hero__stat-label">Client Satisfaction</span>
+            </div>
+            <div className="hero__stat-divider"></div>
+            <div className="hero__stat">
+              <span className="hero__stat-num">2hr</span>
+              <span className="hero__stat-label">Avg Response Time</span>
+            </div>
           </div>
           <div className="hero__trust-right">
             <div className="trust-avatars">
