@@ -271,31 +271,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── ENGINEERING PILLARS ── */}
-      <section className="about-pillars">
-        <div className="about-pillars__inner">
-          <div className="section-header-center">
-            <span className="section-eyebrow">CORE VALUES</span>
-            <h2 className="section-title text-center">Our Engineering <span>Pillars</span></h2>
-            <p className="section-desc text-center">Every project we code rests on four essential pillars of system delivery.</p>
-          </div>
-          <div className="pillars-grid">
-            {pillars.map((p, i) => (
-              <div
-                className="pillar-card"
-                key={i}
-                style={{ '--p-color': p.color, '--p-rgb': p.colorRgb }}
-              >
-                <div className="pillar-card__icon-wrap">
-                  <i className={p.icon} />
-                </div>
-                <h3 className="pillar-card__title">{p.title}</h3>
-                <p className="pillar-card__desc">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ── TIMELINE / MILESTONES ── */}
       <section className="about-timeline">

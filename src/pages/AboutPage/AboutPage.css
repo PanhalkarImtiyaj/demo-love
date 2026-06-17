@@ -992,12 +992,33 @@
   .about-pillars { padding: 60px 20px; }
   .pillars-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .about-timeline { padding: 60px 20px; }
+  .about-timeline { padding: 36px 16px 40px; }
+  .timeline-track { margin-top: 28px; }
   .timeline-line { display: none; }
-  .timeline-item { padding: 0 0 20px 0; justify-content: stretch; }
-  .timeline-item.left, .timeline-item.right { padding: 0 0 20px 0; }
-  .timeline-item__card { max-width: 100%; }
+  .timeline-item {
+    padding: 0 0 12px 0;
+    justify-content: stretch;
+  }
+  .timeline-item.left, .timeline-item.right { padding: 0 0 12px 0; }
+  .timeline-item__card {
+    max-width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
   .timeline-dot { display: none; }
+  .timeline-year {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    align-self: flex-start;
+    margin-top: 2px;
+  }
+  .timeline-title { font-size: 0.9rem; margin: 0 0 4px; }
+  .timeline-desc { font-size: 0.78rem; line-height: 1.45; margin: 0; }
 
   .about-leaders { padding: 80px 20px; }
   .leaders-grid { grid-template-columns: 1fr; gap: 32px; max-width: 450px; margin: 0 auto; }
@@ -1019,7 +1040,11 @@
   .ahero-stat__lbl { font-size: 0.52rem; }
   .ahero-stat-sep { height: 28px; }
   .photo-grid-main { aspect-ratio: 4 / 3; }
-  .pillars-grid { grid-template-columns: 1fr; }
+  .about-timeline { padding: 28px 14px 36px; }
+  .timeline-item__card { padding: 12px 14px; gap: 10px; }
+  .timeline-title { font-size: 0.85rem; }
+  .timeline-desc { font-size: 0.75rem; }
+  .section-title { font-size: clamp(22px, 6vw, 32px); }
   .team-grid { grid-template-columns: 1fr; }
   .cta-actions { flex-direction: column; align-items: center; }
 }
