@@ -789,78 +789,99 @@
 .team-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
+  margin-top: 48px;
 }
 
 .team-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 20px;
-  padding: 32px 24px;
+  border: 1px solid #e8edf5;
+  border-radius: 24px;
+  padding: 36px 28px 32px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
 }
 
 .team-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
+  height: 4px;
   background: var(--e-color, #7c3aed);
   transform: scaleX(0);
-  transition: transform 0.3s ease;
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  border-radius: 0 0 4px 4px;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(var(--e-color, #7c3aed), 0.2);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.04);
+  transform: translateY(-8px);
+  border-color: transparent;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.1);
 }
 
 .team-card:hover::before { transform: scaleX(1); }
 
+/* Large portrait photo */
 .team-card__img-wrap {
-  width: 90px; height: 90px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   overflow: hidden;
-  border: 3px solid rgba(var(--e-color, 124,58,237), 0.15);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  border: 4px solid #f1f5f9;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  transition: all 0.35s ease;
+  background: #f8fafc;
 }
 
 .team-card:hover .team-card__img-wrap {
   border-color: var(--e-color, #7c3aed);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+  transform: scale(1.04);
 }
 
-.team-card__img { width: 100%; height: 100%; object-fit: cover; }
+.team-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
 
+/* Position / Department label */
 .team-card__dept {
-  display: block;
-  font-size: 0.65rem;
+  display: inline-block;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--e-color, #7c3aed);
-  margin-bottom: 6px;
+  background: color-mix(in srgb, var(--e-color, #7c3aed) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--e-color, #7c3aed) 25%, transparent);
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
 }
 
 .team-card__name {
-  font-size: 1.08rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #0f172a;
-  margin: 0 0 4px;
+  margin: 0 0 6px;
+  letter-spacing: -0.2px;
 }
 
 .team-card__role {
   display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.82rem;
+  font-weight: 500;
   color: #64748b;
+  line-height: 1.5;
 }
+
 
 /* ──────────────────────────────────────────
    7. CTA SECTION

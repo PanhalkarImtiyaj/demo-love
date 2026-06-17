@@ -4,6 +4,12 @@ import rahidImg from '../../assets/rahid-director.png';
 import shanvajImg from '../../assets/shanvaj director.png';
 import teamImg from '../../assets/team1.png';
 import teamMeetingImg from '../../assets/teammeting.png';
+import karunaImg from '../../assets/Karuna-cto.png';
+import mubinaImg from '../../assets/mubina-Webdevloper.png';
+import pravinImg from '../../assets/pravin-singh-webdevloper.png';
+import amanImg from '../../assets/aman-bdo.jpeg';
+import adityaImg from "../../assets/aditya patil-Webdevloper.jpg";
+import radhikaImg from "../../assets/Radhika kulkarni HR.png";
 import './AboutPage.css';
 
 const pillars = [
@@ -70,41 +76,49 @@ const leaders = [
   },
 ];
 
+
 const employees = [
   {
-    name: 'Ankit Joshi',
-    role: 'Senior Flutter Developer',
+    name: 'Karuna',
+    role: 'Chief Technology Officer',
+    dept: 'Technology Leadership',
+    image: karunaImg,
+    color: '#7c3aed',
+  },
+  {
+    name: 'Mubina',
+    role: 'Web Developer',
+    dept: 'Web Development',
+    image: mubinaImg,
+    color: '#3b82f6',
+  },
+  {
+    name: 'Pravin Singh',
+    role: 'Android Developer',
     dept: 'Mobile Engineering',
-    image: 'https://i.pravatar.cc/150?img=68',
+    image: pravinImg,
     color: '#10b981',
   },
   {
-    name: 'Sneha Kulkarni',
-    role: 'UI/UX Design Lead',
-    dept: 'Design',
-    image: 'https://i.pravatar.cc/150?img=25',
-    color: '#ec4899',
-  },
-  {
-    name: 'Rahul Patil',
-    role: 'Backend Engineer',
-    dept: 'Engineering',
-    image: 'https://i.pravatar.cc/150?img=33',
+    name: 'Aman',
+    role: 'Full Stack Developer & Business Development Associate',
+    dept: 'Full Stack & Business Development',
+    image: amanImg,
     color: '#f59e0b',
   },
   {
-    name: 'Meera Nair',
-    role: 'Digital Marketing Specialist',
-    dept: 'Marketing',
-    image: 'https://i.pravatar.cc/150?img=45',
-    color: '#06b6d4',
+    name: 'Aditya Patil',
+    role: 'Web Developer',
+    dept: 'Web Development',
+    image: adityaImg,
+    color: '#ec4899',
   },
   {
-    name: 'Vikram Singh',
-    role: 'QA & Testing Engineer',
-    dept: 'Quality Assurance',
-    image: 'https://i.pravatar.cc/150?img=52',
-    color: '#8b5cf6',
+    name: 'Radhika Kulkarni',
+    role: 'Human Resources Manager',
+    dept: 'Human Resources',
+    image: radhikaImg,
+    color: '#06b6d4',
   },
 ];
 
